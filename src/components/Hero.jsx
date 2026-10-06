@@ -15,15 +15,15 @@ export default function Hero({ onOpenBookModal }) {
       <div className="relative z-10 max-w-[1380px] w-full mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-space-xl flex flex-col justify-end">
         {/* Main Catchy Title */}
         <div className="max-w-4xl space-y-space-sm">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/20 text-secondary-fixed border border-secondary-fixed/30 backdrop-blur-md text-xs uppercase tracking-widest font-semibold mb-2">
-            ✨ General Karajat · Private Villa Plots
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed/20 text-secondary-fixed border border-secondary-fixed/30 backdrop-blur-md text-xs uppercase tracking-widest font-semibold mb-2">
+            General Karajat · Private Villa Plots
           </div>
           <h1 className="font-display-lg text-display-lg-mobile lg:text-display-lg text-surface-container-lowest tracking-tight font-display-lg leading-tight">
             Escape to Karajat.<br />
             <span className="italic font-normal text-secondary-fixed">Own Your Hillside Sanctuary at General.</span>
           </h1>
           <p className="font-body-lg text-body-lg text-surface-container-highest/90 max-w-2xl font-light">
-            Curated <strong className="text-white font-semibold">2,000 sq.ft to 1 Acre</strong> Gated Villa Plots with <strong className="text-secondary-fixed font-semibold">Private Pool for Every Villa</strong>. Collector NA & Agriculture sanctioned land equity with lifetime hospitality & assured rental returns.
+            Curated <strong className="text-white font-semibold">2,000 sq.ft to 1 Acre</strong> Gated Villa Plots with <strong className="text-secondary-fixed font-semibold">Private Pool for Every Villa</strong>. Pre-certified, collector-sanctioned land equity with lifetime hospitality & assured rental returns.
           </p>
         </div>
 

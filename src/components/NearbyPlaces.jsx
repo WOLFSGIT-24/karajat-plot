@@ -45,7 +45,7 @@ export default function NearbyPlaces() {
     },
     wonders: {
       title: 'One-of-a-Kind Wonders',
-      icon: 'auto_awesome',
+      icon: 'explore',
       places: [
         { name: 'N.D. Film Studios', detail: 'Iconic Bollywood film sets & tours' },
         { name: 'Monteria Village', detail: 'Cultural agro-tourism heritage village' },
