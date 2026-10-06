@@ -7,10 +7,10 @@ export default function EstateGallery({ onSelectImage }) {
     {
       id: 1,
       category: 'landscape',
-      tag: 'Panoramic Valley',
-      title: 'Misty Western Ghats Ridge Line',
-      subtitle: 'Perpetual morning fog roll over terraced estate topography',
-      image: 'https://lh3.googleusercontent.com/aida/AEtjO1XDr7njAm5liTFIaSJNFUH9x49KlN0ZlbzkwFpZcFYuvvTBpYFZmdtL5nF078NokSqHt529gVbIMWjD7CPCfNMNd9EDeWoEPYSi2HHu2WSnomrmeAc8wVSySK0A05PkBFubKqJCQExIn0nL4zBoOSm_DfcQx4djTSGANYv7P90QzH4AyQt5aY7nYQ2H-H8RCyX2ky9TjSsS2Wm00i2dakGt36zEdgEEPjlg9ehDpwDG0rG5m8VxdgJ4_t8',
+      tag: 'Panoramic Sanctuary',
+      title: 'General Hillside Ridge View',
+      subtitle: 'Perpetual morning mist roll over terraced 2,000 sq ft - 1 Acre estate topography',
+      image: '/hero.jpg',
       span: 'md:col-span-8',
       minHeight: 'min-h-[420px] lg:min-h-[500px]',
     },
@@ -18,8 +18,8 @@ export default function EstateGallery({ onSelectImage }) {
       id: 2,
       category: 'masterplan',
       tag: 'Master Layout',
-      title: 'Concentric Plot Enclaves',
-      subtitle: 'RERA Sanctioned 84-Acre Sectoring',
+      title: 'Collector NA & Agro Enclaves',
+      subtitle: 'Pre-certified 2,000 sq.ft to 1 Acre Plot Sectoring',
       image: 'https://lh3.googleusercontent.com/aida/AEtjO1UiIY9wEIjlRlp7SiybfArPFzbJPcLRRuY0wSMoSz0PTicqcY1D0tyduhBGqLLBfKtvZkLEqpcdgR9L_S5osc0rDuBUzVaQ5zbJ1FVWL5vNXyIgIBnaFu0VNqNN1r183geO4U8frn_EcmjUHzfCmU7daYD61DzKHW__3PrQ2htdJdajV4o5uRFETXdUDBpooC_SecRQcHVYQVqswrVca56d3j7__xmrA-R-YLcno_Bw51ChiI0esocguIw',
       span: 'md:col-span-4',
       minHeight: 'min-h-[300px] lg:min-h-[500px]',
@@ -27,10 +27,10 @@ export default function EstateGallery({ onSelectImage }) {
     {
       id: 3,
       category: 'clubhouse',
-      tag: 'Wellness Clubhouse',
-      title: 'Horizon Edge Pool & Lounge',
-      subtitle: '35,000 sq.ft private social pavilion set against twilight peaks',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBryz8imGvp9STK9q0QNF8xD7M6p2h7mLZUw2OlWdx_IU7q_FPM1VjSkSvnLHTJLGwrBvyKjthoIMvBq0e19lBcv5O_ihPyt4TP-J7La8sekwoUD6LTzZvgQqB6vmPNAtxRXorridMXCG6y72pkeVhkDaSITTCgAO6xYnSqSDzmIJ3XVYbvK_KlmWd8HcKtfybqfKY6gL4LoN0wIM3sE14ThGo6IwCvwbGxuxZWZ5bA5SOEaFuB5XZo',
+      tag: 'Private Villa Pool',
+      title: 'Private Pool for Every Villa',
+      subtitle: 'Exclusive lap & infinity pools integrated with each General villa plot parcel',
+      image: '/pool_villa.jpg',
       span: 'md:col-span-6',
       minHeight: 'min-h-[360px]',
     },
@@ -39,7 +39,7 @@ export default function EstateGallery({ onSelectImage }) {
       category: 'orchards',
       tag: 'Agro Sanctuary',
       title: 'The Mango Grove Living Deck',
-      subtitle: 'Private sundeck overlooking organic Alphonso plantations',
+      subtitle: 'Private sundeck overlooking organic Alphonso plantations & waterfall streams',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDsygrpDg0lQxAx4gBxSEInzZNlAPmZNzz9s12Hkl2jeWSTA3P8STRBr-nyFtU-iTjwDbKpne-tcpHZXA3Nsu4WfHSK0JhimpRumQSeo5gt5cWjKJy1HwNawX0JG1LQyVPaEf3wZIOEtxNcOLK5gnrfGH8PeRt-EQpTIaQECZGMEanGck_0eIIHbfDBznLR2V7rmcoXzyF_ucPWfSECdeI1zRP4xp_rTVCMV2a1Z_z0-XNGnbKoezG9',
       span: 'md:col-span-6',
       minHeight: 'min-h-[360px]',
@@ -54,7 +54,7 @@ export default function EstateGallery({ onSelectImage }) {
     { key: 'all', label: 'All Vignettes' },
     { key: 'landscape', label: 'Landscape' },
     { key: 'masterplan', label: 'Masterplan' },
-    { key: 'clubhouse', label: 'Clubhouse' },
+    { key: 'clubhouse', label: 'Private Pool' },
     { key: 'orchards', label: 'Orchards' },
   ];
 
@@ -68,7 +68,7 @@ export default function EstateGallery({ onSelectImage }) {
               Visual Archives
             </span>
             <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
-              The Estate in Pictures
+              The General Estate in Pictures
             </h2>
           </div>
 
@@ -130,7 +130,7 @@ export default function EstateGallery({ onSelectImage }) {
         {/* Action Bar */}
         <div className="flex items-center justify-between pt-space-lg">
           <p className="font-body-sm text-body-sm text-on-surface-variant">
-            Showing {filteredItems.length} verified photographic surveys · Western Ghats High-Elevation Ridge
+            Showing {filteredItems.length} verified photographic surveys · General Karajat Foothill Ridge
           </p>
           <button
             onClick={() => onSelectImage(galleryItems[0])}

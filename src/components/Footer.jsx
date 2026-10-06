@@ -8,21 +8,21 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-space-md pr-space-md">
             <div className="flex items-center gap-space-sm">
               <span className="font-headline-md text-headline-md text-surface-container-lowest tracking-tight font-bold">
-                PRINALTO
+                GENERAL
               </span>
               <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim pl-space-xs border-l border-primary-container ml-1">
-                Estates & Land
+                Karajat Villa Plots
               </span>
             </div>
             <p className="font-body-sm text-body-sm text-surface-variant/80 max-w-md">
-              Institutional-grade land parcels and curated hillside estate plots in the serene valleys of Karajat. Merging regenerative agriculture with generational land equity preservation.
+              Institutional-grade 2,000 sq.ft to 1 Acre hillside villa plots in Karajat. Featuring private pool for every villa, gated community security, and assured rental returns.
             </p>
             <div className="pt-space-xs">
               <span className="font-label-sm text-label-sm text-surface-variant/60 block uppercase tracking-wider">
                 MahaRERA Registration Number
               </span>
               <span className="font-label-lg text-label-lg text-primary-fixed font-mono">
-                P52000049812 | Project Phase I & II
+                P52000049812 | General Phase I & II
               </span>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
               Karajat Site Office
             </span>
             <p className="font-body-sm text-body-sm text-surface-variant/80 leading-relaxed">
-              Prinalto Foothill Estates,<br />
+              General Foothill Estates,<br />
               Off Karajat-Murbad Highway,<br />
               Village Posari, Karajat, Raigad,<br />
               Maharashtra - 410201
@@ -56,17 +56,17 @@ export default function Footer() {
               <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#overview">
                 Overview
               </a>
-              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#why-karajat">
-                Strategic Corridor
-              </a>
               <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#plot-masterplan">
-                Topographic Masterplan
+                Plot Masterplan (2k-1 Acre)
               </a>
               <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#amenities">
-                Clubhouse & Agro-Sanctuary
+                Private Pool & Amenities
               </a>
-              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#location-and-connectivity">
-                Regional Infrastructure
+              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#nearby-places">
+                Curated Neighborhood
+              </a>
+              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#payment-options">
+                Payment Options (CLP / Subvention)
               </a>
             </div>
           </div>
@@ -76,20 +76,20 @@ export default function Footer() {
               Investor Resources
             </span>
             <div className="flex flex-col gap-space-xs">
-              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#investment-and-roi">
-                Land Value Trends (CAGR)
+              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#payment-options">
+                Subvention & CLP Offers
               </a>
               <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#overview">
-                Clear Title Certification
+                NA / Agro Title Guarantees
               </a>
-              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#overview">
-                7/12 Extract Documentation
-              </a>
-              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#plot-masterplan">
-                Plot Demarcation Schedule
+              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#amenities">
+                Assured Rental Program
               </a>
               <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#book-tour">
-                Institutional Wealth Desk
+                On-Spot Booking Discounts
+              </a>
+              <a className="font-body-sm text-body-sm text-surface-variant/80 hover:text-on-primary transition-colors" href="#book-tour">
+                Private Advisory Desk
               </a>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-surface-variant/60 font-body-sm text-body-sm">
           <p className="text-center md:text-left">
-            © 2025 Prinalto Realty Infra LLP. All rights reserved. Registered under Real Estate (Regulation and Development) Act.
+            © 2025 General Realty LLP. All rights reserved. Registered under Real Estate (Regulation and Development) Act.
           </p>
           <div className="flex items-center gap-space-lg">
             <a className="hover:text-on-primary transition-colors" href="#overview">

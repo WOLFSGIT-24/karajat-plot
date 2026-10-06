@@ -5,6 +5,8 @@ import EstateGallery from './components/EstateGallery';
 import BespokePlans from './components/BespokePlans';
 import Amenities from './components/Amenities';
 import WhyKarajat from './components/WhyKarajat';
+import NearbyPlaces from './components/NearbyPlaces';
+import PaymentOptions from './components/PaymentOptions';
 import LocationConnectivity from './components/LocationConnectivity';
 import BookTour from './components/BookTour';
 import Footer from './components/Footer';
@@ -43,6 +45,8 @@ export default function App() {
           <BespokePlans onOpenDossierModal={(plan) => setSelectedDossierPlan(plan)} />
           <Amenities />
           <WhyKarajat />
+          <NearbyPlaces />
+          <PaymentOptions onOpenBookModal={handleOpenBookModal} />
           <LocationConnectivity />
           <BookTour onShowToast={showToast} />
         </div>

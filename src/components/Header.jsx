@@ -7,6 +7,8 @@ export default function Header({ onOpenBookModal }) {
     { label: 'Overview', href: '#overview' },
     { label: 'Masterplan', href: '#plot-masterplan' },
     { label: 'Amenities', href: '#amenities' },
+    { label: 'Nearby Places', href: '#nearby-places' },
+    { label: 'Payment Options', href: '#payment-options' },
     { label: 'Location', href: '#location-and-connectivity' },
   ];
 
@@ -15,14 +17,14 @@ export default function Header({ onOpenBookModal }) {
       <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
         <div className="flex items-center gap-space-xl">
           <a className="flex items-center gap-space-xs sm:gap-space-sm" href="#overview">
-            <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">PRINALTO</span>
+            <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">GENERAL</span>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/80 pl-space-xs border-l border-on-surface-variant/20 ml-1">Karajat</span>
           </a>
-          <nav className="hidden md:flex items-center gap-space-lg">
+          <nav className="hidden md:flex items-center gap-space-md lg:gap-space-lg">
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors font-medium"
+                className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors font-medium whitespace-nowrap"
                 href={link.href}
               >
                 {link.label}

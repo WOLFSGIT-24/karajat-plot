@@ -4,39 +4,39 @@ export default function Amenities() {
   const amenitiesList = [
     {
       icon: 'pool',
-      title: '40m Horizon Infinity Pool',
-      description: 'Temperature-balanced Olympic-grade edge lap pool gazing directly out over the Posari waterfalls and riverbed.',
-      status: 'Phase I Ready',
+      title: 'Private Pool for Every Villa',
+      description: 'Custom temperature-balanced private lap & infinity pools included with every villa plot parcel.',
+      status: 'Villa Standard',
+    },
+    {
+      icon: 'shield',
+      title: 'Gated Community Security',
+      description: '24/7 multi-tiered perimeter security, biometric entry points, smart surveillance & CCTV coverage.',
+      status: 'Fully Secured',
+    },
+    {
+      icon: 'payments',
+      title: 'Assured Rental Program',
+      description: 'Turnkey luxury holiday rental management generating assured annual yields for plot owners.',
+      status: 'High Yield ROI',
+    },
+    {
+      icon: 'concierge',
+      title: 'Lifetime Hospitality',
+      description: 'Dedicated 5-star concierge, housekeeping, landscape upkeep, and private chef on demand.',
+      status: 'Turnkey Leisure',
     },
     {
       icon: 'agriculture',
       title: 'Organic Agro & Orchards',
-      description: 'Fully tended Ratnagiri Alphonso groves, spice gardens, and farm-to-table vegetable plots managed by resident agronomists.',
+      description: 'Fully tended Ratnagiri Alphonso groves, spice gardens, and farm-to-table vegetable plots.',
       status: 'Active Harvest',
     },
     {
       icon: 'self_improvement',
-      title: 'Forest Yoga Pavilion',
-      description: 'Cantilevered teakwood deck immersed in dense bamboo clusters for sunrise mindfulness, sound-baths, and meditation.',
-      status: 'Open Air',
-    },
-    {
-      icon: 'sports_tennis',
-      title: 'Floodlit Tennis & Pickleball',
-      description: 'Professional cushioned-acrylic multi-sport courts equipped with tournament lighting and players lounge.',
-      status: 'Championship Spec',
-    },
-    {
-      icon: 'qr_code_2',
-      title: 'Dark-Sky Observatory',
-      description: 'Unblemished Bortle-4 Karajat night skies paired with an astronomical telescope dome for stargazing evenings.',
-      status: 'High Elevation Deck',
-    },
-    {
-      icon: 'concierge',
-      title: 'Managed Rental Concierge',
-      description: 'Turnkey holiday rental management allowing effortless yields of 9-12% p.a. through luxury villa hospitality operators.',
-      status: 'Passive Income Desk',
+      title: 'Forest Yoga & Observatory',
+      description: 'Teakwood bamboo decks for sunrise mindfulness paired with a dark-sky stargazing telescope dome.',
+      status: 'Open Air Wellness',
     },
   ];
 
@@ -47,34 +47,34 @@ export default function Amenities() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
           <div>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs font-semibold">
-              Bespoke Club Infrastructure
+              Bespoke Facilities
             </span>
             <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
-              Resort Living, Daily
+              Resort Living & Lifetime Hospitality
             </h2>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
-            Zero-maintenance community upkeep handled by five-star hospitality operators, ensuring turn-key leisure whenever you return home.
+            Gated community lifestyle featuring private pools for every villa, assured rental programs, and zero-maintenance luxury hospitality.
           </p>
         </div>
 
         {/* Spotlight Feature Card */}
         <div className="relative w-full rounded-2xl overflow-hidden shadow-lg mb-gutter bg-primary min-h-[380px] lg:min-h-[460px] flex items-end">
           <img
-            alt="Clubhouse with Horizon Pool"
+            alt="General Villa Plot with Private Pool"
             className="absolute inset-0 w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBryz8imGvp9STK9q0QNF8xD7M6p2h7mLZUw2OlWdx_IU7q_FPM1VjSkSvnLHTJLGwrBvyKjthoIMvBq0e19lBcv5O_ihPyt4TP-J7La8sekwoUD6LTzZvgQqB6vmPNAtxRXorridMXCG6y72pkeVhkDaSITTCgAO6xYnSqSDzmIJ3XVYbvK_KlmWd8HcKtfybqfKY6gL4LoN0wIM3sE14ThGo6IwCvwbGxuxZWZ5bA5SOEaFuB5XZo"
+            src="/pool_villa.jpg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
           <div className="relative z-10 p-space-md lg:p-space-xl max-w-3xl">
             <span className="px-space-md py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-space-sm inline-block font-semibold">
-              Flagship Facility
+              Signature Feature
             </span>
             <h3 className="font-display-md text-display-md-mobile lg:text-display-md text-surface-container-lowest font-semibold">
-              The Valley Clubhouse
+              Private Pool for Every Villa
             </h3>
             <p className="font-body-lg text-body-lg text-surface-container-highest/90 mt-space-xs">
-              35,000 sq.ft of elevated wellness facilities including a heated 40m horizon edge pool, private dining cabanas, library salon, and Ayurvedic steam spa.
+              Every General villa plot includes a pre-sanctioned private swimming pool designed to seamlessly merge with the mist-clad Karajat hillside panorama.
             </p>
           </div>
         </div>
