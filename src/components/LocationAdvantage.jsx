@@ -68,14 +68,68 @@ export default function LocationAdvantage({ onOpenBookModal }) {
   return (
     <section className="w-full py-space-xl bg-surface" id="location">
       <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin">
+        
+        {/* Section 5 — Dark Strategic Location Card (As per user screenshot) */}
+        <div className="bg-[#292a28] rounded-3xl overflow-hidden shadow-2xl mb-space-xl border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            {/* Left Column Image */}
+            <div className="relative h-72 sm:h-96 lg:h-full min-h-[350px] lg:min-h-[480px] w-full overflow-hidden">
+              <img
+                src="/location_highway.jpg"
+                alt="Strategic Location Aerial View"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right Column Content */}
+            <div className="p-8 sm:p-10 lg:p-14 xl:p-16 flex flex-col justify-center text-white bg-[#292a28]">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="material-symbols-outlined text-[#7aa066] text-lg">location_on</span>
+                <span className="text-[#7aa066] font-semibold text-xs md:text-sm tracking-[0.18em] uppercase font-label-sm">
+                  STRATEGIC LOCATION
+                </span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white tracking-tight leading-[1.12] mb-5 font-display-md">
+                Crossroads of <br className="hidden sm:inline" />
+                Convenience
+              </h2>
+
+              <p className="text-neutral-300 text-sm md:text-base leading-relaxed mb-8 max-w-xl font-body-md">
+                While deeply rooted in nature, General by Prinalto Estates is strategically located to provide convenient access to essential services.
+              </p>
+
+              <ul className="space-y-4 font-body-md">
+                <li className="flex items-center gap-3 text-neutral-200 text-sm md:text-base font-medium">
+                  <span className="w-2 h-2 rounded-full bg-[#7aa066] shrink-0 inline-block" />
+                  Easy access to major highways
+                </li>
+                <li className="flex items-center gap-3 text-neutral-200 text-sm md:text-base font-medium">
+                  <span className="w-2 h-2 rounded-full bg-[#7aa066] shrink-0 inline-block" />
+                  Proximity to schools &amp; hospitals
+                </li>
+                <li className="flex items-center gap-3 text-neutral-200 text-sm md:text-base font-medium">
+                  <span className="w-2 h-2 rounded-full bg-[#7aa066] shrink-0 inline-block" />
+                  Upcoming metro connectivity
+                </li>
+                <li className="flex items-center gap-3 text-neutral-200 text-sm md:text-base font-medium">
+                  <span className="w-2 h-2 rounded-full bg-[#7aa066] shrink-0 inline-block" />
+                  Near nature reserves
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Nearby Destinations & Categories Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
           <div>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs font-semibold">
-              Section 5 — Location Advantage
+              Explore The Neighborhood
             </span>
-            <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
+            <h3 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
               Everything Around You
-            </h2>
+            </h3>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
             Everything you need for leisure, adventure, dining, and daily living within quick driving distance.
@@ -137,3 +191,4 @@ export default function LocationAdvantage({ onOpenBookModal }) {
     </section>
   );
 }
+
