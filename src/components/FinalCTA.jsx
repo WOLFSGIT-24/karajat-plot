@@ -78,46 +78,47 @@ export default function FinalCTA({ onShowToast }) {
   };
 
   return (
-    <section className="relative w-full py-space-xl bg-primary text-on-primary overflow-hidden min-h-[600px] flex items-center" id="book-tour">
-      {/* Background Image with Light/Subtle Overlay */}
+    <section className="relative w-full py-space-xl text-on-primary overflow-hidden min-h-[600px] flex items-center" id="book-tour">
+      {/* Background Image without heavy green overlay */}
       <div className="absolute inset-0 z-0">
         <img
           alt="Find the Right Plot in Karjat"
           className="w-full h-full object-cover scale-105"
           src="/agro_estate.jpg"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/30"></div>
+        {/* Soft vignette gradient for text contrast only */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
       </div>
 
       <div className="relative z-10 max-w-[1380px] w-full mx-auto px-margin-mobile lg:px-margin">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
           
           {/* Left Column: Heading, Copy, Badges */}
-          <div className="lg:col-span-6 space-y-space-md text-left">
-            <span className="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest font-semibold border border-white/20">
+          <div className="lg:col-span-6 space-y-space-md text-left bg-black/30 p-space-lg rounded-2xl backdrop-blur-md border border-white/10">
+            <span className="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-white/20 backdrop-blur-md text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest font-semibold border border-white/20">
               Section 7 — Final CTA
             </span>
-            <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-surface-container-lowest tracking-tight font-semibold leading-tight">
+            <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-white tracking-tight font-semibold leading-tight drop-shadow-md">
               Find the Right Plot in Karjat
             </h2>
-            <p className="font-body-lg text-body-lg text-surface-container-highest/90 max-w-xl font-light">
+            <p className="font-body-lg text-body-lg text-white/90 max-w-xl font-light leading-relaxed">
               Explore multiple plot opportunities in Karjat and find an option that matches your investment, weekend-home or private-villa requirements.
             </p>
-            <p className="font-body-md text-body-md text-surface-variant/80 max-w-xl">
+            <p className="font-body-md text-body-md text-white/80 max-w-xl leading-relaxed">
               Schedule a site visit to explore available options, understand pricing and compare suitable plot opportunities.
             </p>
 
             {/* Key badges */}
-            <div className="pt-space-sm flex flex-wrap items-center gap-space-md text-surface-bright font-medium">
-              <div className="flex items-center gap-space-xs bg-surface-container-lowest/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+            <div className="pt-space-sm flex flex-wrap items-center gap-space-md text-white font-medium">
+              <div className="flex items-center gap-space-xs bg-white/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
                 <span className="material-symbols-outlined text-secondary-fixed text-title-md">place</span>
                 <span className="font-label-md text-label-md">Karajat</span>
               </div>
-              <div className="flex items-center gap-space-xs bg-surface-container-lowest/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div className="flex items-center gap-space-xs bg-white/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
                 <span className="material-symbols-outlined text-secondary-fixed text-title-md">square_foot</span>
                 <span className="font-label-md text-label-md">Plot sizes from 2,000 sq. ft. to 1 Acre</span>
               </div>
-              <div className="flex items-center gap-space-xs bg-surface-container-lowest/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <div className="flex items-center gap-space-xs bg-white/15 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
                 <span className="material-symbols-outlined text-secondary-fixed text-title-md">payments</span>
                 <span className="font-label-md text-label-md">Starting from ₹1 Cr+</span>
               </div>
@@ -126,7 +127,7 @@ export default function FinalCTA({ onShowToast }) {
 
           {/* Right Column: Clean Site Visit Form */}
           <div className="lg:col-span-6 flex justify-end">
-            <div className="w-full max-w-lg bg-surface-container-lowest/90 backdrop-blur-xl p-space-lg lg:p-space-xl rounded-2xl shadow-2xl border border-white/40 text-on-surface">
+            <div className="w-full max-w-lg bg-surface-container-lowest/95 backdrop-blur-xl p-space-lg lg:p-space-xl rounded-2xl shadow-2xl border border-white/40 text-on-surface">
               <div className="mb-space-md text-left">
                 <h3 className="font-title-lg text-title-lg text-primary font-bold">
                   Book Your Site Visit
@@ -207,7 +208,7 @@ export default function FinalCTA({ onShowToast }) {
                 </div>
 
                 <button
-                  className="w-full bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg py-space-md rounded-lg font-bold shadow-lg transition-all duration-300 cursor-pointer text-center"
+                  className="w-full bg-[#557A46] hover:bg-[#3b5730] text-white font-label-lg text-label-lg py-space-md rounded-lg font-bold shadow-lg transition-all duration-300 cursor-pointer text-center"
                   type="submit"
                 >
                   Book Your Site Visit
