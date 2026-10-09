@@ -96,7 +96,7 @@ export default function FinalCTA({ onShowToast }) {
           {/* Left Column: Heading, Copy, Badges */}
           <div className="lg:col-span-6 space-y-space-md text-left bg-black/30 p-space-lg rounded-2xl backdrop-blur-md border border-white/10">
             <span className="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-white/20 backdrop-blur-md text-secondary-fixed font-label-sm text-label-sm uppercase tracking-widest font-semibold border border-white/20">
-              Section 7 — Final CTA
+              Final CTA
             </span>
             <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-white tracking-tight font-semibold leading-tight drop-shadow-md">
               Find the Right Plot in Karjat

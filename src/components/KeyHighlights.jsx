@@ -20,7 +20,7 @@ export default function KeyHighlights({ onOpenBookModal }) {
         <div className="flex flex-col lg:flex-row items-start justify-between gap-space-lg mb-space-lg">
           <div className="max-w-3xl">
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs font-semibold">
-              Section 6 — Key Highlights
+              Key Highlights
             </span>
             <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
               Why Consider a Plot in Karjat?

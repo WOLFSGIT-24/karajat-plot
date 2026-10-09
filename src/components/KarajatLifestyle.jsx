@@ -7,7 +7,7 @@ export default function KarajatLifestyle({ onOpenBookModal }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
           <div>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-space-xs font-semibold">
-              Section 4 — The Karjat Lifestyle
+              The Karjat Lifestyle
             </span>
             <h2 className="font-display-md text-display-md-mobile lg:text-display-md text-primary tracking-tight">
               More Than Just a Plot
