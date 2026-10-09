@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Header({ onOpenBookModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { label: 'Overview', href: '#hero' },
@@ -13,41 +22,65 @@ export default function Header({ onOpenBookModal }) {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md text-white border-b border-white/10 transition-all">
-      <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
-        <div className="flex items-center gap-space-xl">
-          <a className="flex items-center gap-space-xs sm:gap-space-sm" href="#hero">
-            <span className="font-headline-sm text-headline-sm text-white tracking-tight font-bold">GENERAL</span>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-white/80 pl-space-xs border-l border-white/30 ml-1">Karjat</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-space-sm lg:gap-space-md">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-black/60 backdrop-blur-lg py-3 border-b border-white/10 shadow-lg'
+          : 'bg-transparent py-5'
+      }`}
+    >
+      <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+        
+        {/* Left: Circular Organic Line-Art Emblem Logo */}
+        <a className="flex items-center gap-3 group" href="#hero">
+          <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white/90 group-hover:border-white group-hover:text-white transition-colors bg-white/5 backdrop-blur-sm">
+            <span className="material-symbols-outlined text-xl">filter_vintage</span>
+          </div>
+          <div className="flex flex-col text-left">
+            <span className="font-headline-sm text-lg text-white tracking-tight font-bold leading-none">GENERAL</span>
+            <span className="font-label-sm text-[10px] uppercase tracking-widest text-white/70">Karjat</span>
+          </div>
+        </a>
+
+        {/* Center / Right: Nav Links + Enquire Button */}
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                className="font-label-lg text-label-lg text-white/80 hover:text-white transition-colors font-medium whitespace-nowrap"
+                className="text-sm text-white/90 hover:text-white transition-colors font-medium tracking-wide whitespace-nowrap"
                 href={link.href}
               >
                 {link.label}
               </a>
             ))}
           </nav>
-        </div>
 
-        <div className="flex items-center gap-space-md">
+          {/* Far Right Green Pill Button */}
           <button
             onClick={onOpenBookModal}
-            className="bg-[#557A46] hover:bg-[#3e5c32] text-white transition-all font-label-lg text-label-lg px-6 py-2.5 rounded-xl shadow-md font-semibold cursor-pointer whitespace-nowrap"
+            className="bg-[#6b8e5c] hover:bg-[#557a46] text-white transition-all font-medium text-sm px-6 py-2.5 rounded-xl shadow-md cursor-pointer whitespace-nowrap"
             type="button"
           >
             Enquire Now
           </button>
+        </div>
 
+        {/* Mobile menu toggle */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={onOpenBookModal}
+            className="bg-[#6b8e5c] text-white font-medium text-xs px-4 py-2 rounded-lg"
+            type="button"
+          >
+            Enquire
+          </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-white focus:outline-none"
+            className="p-2 text-white focus:outline-none"
             aria-label="Toggle menu"
           >
-            <span className="material-symbols-outlined text-headline-sm">
+            <span className="material-symbols-outlined text-2xl">
               {mobileMenuOpen ? 'close' : 'menu'}
             </span>
           </button>
@@ -56,13 +89,13 @@ export default function Header({ onOpenBookModal }) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-primary/95 text-white border-b border-white/10 px-margin-mobile py-4 space-y-3 shadow-xl backdrop-blur-xl">
+        <div className="md:hidden bg-black/90 text-white border-b border-white/10 px-margin-mobile py-4 space-y-3 shadow-xl backdrop-blur-xl">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-label-lg text-label-lg text-white/80 hover:text-white py-1 font-medium"
+                className="text-sm text-white/80 hover:text-white py-1 font-medium"
                 href={link.href}
               >
                 {link.label}
@@ -72,7 +105,7 @@ export default function Header({ onOpenBookModal }) {
           <div className="pt-2 border-t border-white/20 flex flex-col gap-2">
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenBookModal(); }}
-              className="w-full text-center bg-[#557A46] text-white py-2.5 rounded-xl font-label-lg font-semibold"
+              className="w-full text-center bg-[#6b8e5c] text-white py-2.5 rounded-xl font-medium text-sm"
             >
               Enquire Now
             </button>
