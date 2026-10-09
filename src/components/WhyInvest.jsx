@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function WhyInvest({ onOpenBookModal }) {
   const points = [
-    { text: 'Plot options from 2,000 sq. ft. to 1 Acre', icon: 'square_foot' },
-    { text: 'Agricultural & Non-Agricultural options', icon: 'gavel' },
-    { text: 'Gated community options', icon: 'shield' },
-    { text: 'Private villa & pool options', icon: 'pool' },
-    { text: 'Multiple lifestyle amenities', icon: 'sports_tennis' },
-    { text: 'Assured rental opportunities on select projects', icon: 'payments' },
+    { text: 'Plot sizes 2,000 sq. ft. to 1 Acre', icon: 'square_foot' },
+    { text: 'Agricultural & Non-Agricultural land options', icon: 'gavel' },
+    { text: 'Secure gated community living options', icon: 'shield' },
+    { text: 'Private villa & swimming pool options', icon: 'pool' },
+    { text: 'Multiple luxury lifestyle club amenities', icon: 'sports_tennis' },
+    { text: 'Assured rental yields on select projects', icon: 'payments' },
     { text: 'Lifetime hospitality on select projects', icon: 'concierge' },
-    { text: 'Surrounded by nature and weekend attractions', icon: 'nature_people' },
+    { text: 'Surrounded by nature & weekend attractions', icon: 'nature_people' },
   ];
 
   return (
@@ -37,12 +37,12 @@ export default function WhyInvest({ onOpenBookModal }) {
           </button>
         </div>
 
-        {/* 8 Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        {/* 8 Highlights Grid - Uniform Height Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
           {points.map((pt, idx) => (
             <div
               key={idx}
-              className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all border border-surface-container-high/60 flex flex-col justify-between"
+              className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all border border-surface-container-high/60 flex flex-col justify-between min-h-[140px]"
             >
               <div>
                 <div className="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-space-md">

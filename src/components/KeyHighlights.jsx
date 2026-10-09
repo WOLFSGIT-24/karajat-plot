@@ -2,16 +2,16 @@ import React from 'react';
 
 export default function KeyHighlights({ onOpenBookModal }) {
   const highlights = [
-    'Plots from 2,000 sq. ft. to 1 Acre',
-    'Starting from ₹1 Cr+',
-    'Agricultural & Non-Agricultural options',
-    'Gated community options',
-    'Private pool options',
-    'Multiple amenities',
-    'Assured rental opportunities on select projects',
+    'Plot sizes 2,000 sq. ft. to 1 Acre',
+    'Investment pricing starting from ₹1 Cr+',
+    'Agricultural & Non-Agricultural land options',
+    'Secure gated community living options',
+    'Private villa swimming pool options',
+    'Multiple luxury lifestyle club amenities',
+    'Assured rental yields on select projects',
     'Lifetime hospitality on select projects',
-    'Strong weekend-home appeal',
-    'Surrounded by nature, leisure and adventure',
+    'Strong weekend home investment appeal',
+    'Surrounded by nature, leisure & adventure',
   ];
 
   return (
@@ -36,14 +36,14 @@ export default function KeyHighlights({ onOpenBookModal }) {
           </button>
         </div>
 
-        {/* 10 Highlights List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl">
+        {/* 10 Highlights List - Uniform Height Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-xl items-stretch">
           {highlights.map((item, idx) => (
             <div
               key={idx}
-              className="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high shadow-sm flex items-start gap-space-xs"
+              className="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container-high shadow-sm flex items-start gap-space-xs min-h-[90px] h-full"
             >
-              <span className="material-symbols-outlined text-secondary text-title-md mt-0.5">check_circle</span>
+              <span className="material-symbols-outlined text-secondary text-title-md mt-0.5 flex-shrink-0">check_circle</span>
               <span className="font-title-md text-title-md text-primary font-semibold leading-snug">
                 {item}
               </span>
