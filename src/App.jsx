@@ -36,7 +36,7 @@ export default function App() {
     <div className="min-h-screen bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
       <Header onOpenBookModal={handleOpenBookModal} />
 
-      <main className="w-full pt-20 bg-surface">
+      <main className="w-full bg-surface">
         <div className="flex flex-col w-full">
           {/* Section 1 — Hero Banner */}
           <Hero onOpenBookModal={handleOpenBookModal} />

@@ -23,22 +23,22 @@ export default function Header({ onOpenBookModal }) {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/60 backdrop-blur-lg py-3 border-b border-white/10 shadow-lg'
-          : 'bg-transparent py-5'
+          ? 'bg-black/85 backdrop-blur-lg py-3 border-b border-white/10 shadow-2xl'
+          : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
       }`}
     >
       <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
         
         {/* Left: Circular Organic Line-Art Emblem Logo */}
         <a className="flex items-center gap-3 group" href="#hero">
-          <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white/90 group-hover:border-white group-hover:text-white transition-colors bg-white/5 backdrop-blur-sm">
+          <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white/90 group-hover:border-white group-hover:text-white transition-colors bg-white/10 backdrop-blur-sm">
             <span className="material-symbols-outlined text-xl">filter_vintage</span>
           </div>
           <div className="flex flex-col text-left">
             <span className="font-headline-sm text-lg text-white tracking-tight font-bold leading-none">GENERAL</span>
-            <span className="font-label-sm text-[10px] uppercase tracking-widest text-white/70">Karjat</span>
+            <span className="font-label-sm text-[10px] uppercase tracking-widest text-white/80">Karjat</span>
           </div>
         </a>
 
@@ -48,7 +48,7 @@ export default function Header({ onOpenBookModal }) {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                className="text-sm text-white/90 hover:text-white transition-colors font-medium tracking-wide whitespace-nowrap"
+                className="text-sm text-white/90 hover:text-white transition-colors font-medium tracking-wide whitespace-nowrap drop-shadow-sm"
                 href={link.href}
               >
                 {link.label}
@@ -59,7 +59,7 @@ export default function Header({ onOpenBookModal }) {
           {/* Far Right Green Pill Button */}
           <button
             onClick={onOpenBookModal}
-            className="bg-[#6b8e5c] hover:bg-[#557a46] text-white transition-all font-medium text-sm px-6 py-2.5 rounded-xl shadow-md cursor-pointer whitespace-nowrap"
+            className="bg-[#557A46] hover:bg-[#3b5730] text-white transition-all font-medium text-sm px-6 py-2.5 rounded-xl shadow-md cursor-pointer whitespace-nowrap"
             type="button"
           >
             Enquire Now
@@ -70,7 +70,7 @@ export default function Header({ onOpenBookModal }) {
         <div className="md:hidden flex items-center gap-3">
           <button
             onClick={onOpenBookModal}
-            className="bg-[#6b8e5c] text-white font-medium text-xs px-4 py-2 rounded-lg"
+            className="bg-[#557A46] text-white font-medium text-xs px-4 py-2 rounded-lg"
             type="button"
           >
             Enquire
@@ -89,7 +89,7 @@ export default function Header({ onOpenBookModal }) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/90 text-white border-b border-white/10 px-margin-mobile py-4 space-y-3 shadow-xl backdrop-blur-xl">
+        <div className="md:hidden bg-black/95 text-white border-b border-white/10 px-margin-mobile py-4 space-y-3 shadow-xl backdrop-blur-xl">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
@@ -105,7 +105,7 @@ export default function Header({ onOpenBookModal }) {
           <div className="pt-2 border-t border-white/20 flex flex-col gap-2">
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenBookModal(); }}
-              className="w-full text-center bg-[#6b8e5c] text-white py-2.5 rounded-xl font-medium text-sm"
+              className="w-full text-center bg-[#557A46] text-white py-2.5 rounded-xl font-medium text-sm"
             >
               Enquire Now
             </button>
