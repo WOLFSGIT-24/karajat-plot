@@ -13,18 +13,18 @@ export default function Header({ onOpenBookModal }) {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all">
+    <header className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md text-white border-b border-white/10 transition-all">
       <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
         <div className="flex items-center gap-space-xl">
           <a className="flex items-center gap-space-xs sm:gap-space-sm" href="#hero">
-            <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">GENERAL</span>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/80 pl-space-xs border-l border-on-surface-variant/20 ml-1">Karjat</span>
+            <span className="font-headline-sm text-headline-sm text-white tracking-tight font-bold">GENERAL</span>
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-white/80 pl-space-xs border-l border-white/30 ml-1">Karjat</span>
           </a>
           <nav className="hidden md:flex items-center gap-space-sm lg:gap-space-md">
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors font-medium whitespace-nowrap"
+                className="font-label-lg text-label-lg text-white/80 hover:text-white transition-colors font-medium whitespace-nowrap"
                 href={link.href}
               >
                 {link.label}
@@ -36,15 +36,15 @@ export default function Header({ onOpenBookModal }) {
         <div className="flex items-center gap-space-md">
           <button
             onClick={onOpenBookModal}
-            className="bg-tertiary-container hover:bg-tertiary text-on-tertiary transition-colors font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg shadow-sm font-semibold cursor-pointer whitespace-nowrap"
+            className="bg-[#557A46] hover:bg-[#3e5c32] text-white transition-all font-label-lg text-label-lg px-6 py-2.5 rounded-xl shadow-md font-semibold cursor-pointer whitespace-nowrap"
             type="button"
           >
-            Book Site Visit
+            Enquire Now
           </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-primary focus:outline-none"
+            className="md:hidden p-2 text-white focus:outline-none"
             aria-label="Toggle menu"
           >
             <span className="material-symbols-outlined text-headline-sm">
@@ -56,25 +56,25 @@ export default function Header({ onOpenBookModal }) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-surface-container-lowest border-b border-surface-container-high px-margin-mobile py-4 space-y-3 shadow-lg">
+        <div className="md:hidden bg-primary/95 text-white border-b border-white/10 px-margin-mobile py-4 space-y-3 shadow-xl backdrop-blur-xl">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary py-1 font-medium"
+                className="font-label-lg text-label-lg text-white/80 hover:text-white py-1 font-medium"
                 href={link.href}
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          <div className="pt-2 border-t border-surface-container-high flex flex-col gap-2">
+          <div className="pt-2 border-t border-white/20 flex flex-col gap-2">
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenBookModal(); }}
-              className="w-full text-center bg-tertiary-container text-on-tertiary py-2.5 rounded-lg font-label-lg font-semibold"
+              className="w-full text-center bg-[#557A46] text-white py-2.5 rounded-xl font-label-lg font-semibold"
             >
-              Book Site Visit
+              Enquire Now
             </button>
           </div>
         </div>

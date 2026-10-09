@@ -2,74 +2,70 @@ import React from 'react';
 
 export default function Hero({ onOpenBookModal }) {
   return (
-    <section className="relative w-full min-h-[90vh] -mt-20 pt-20 flex flex-col justify-end text-on-primary overflow-hidden" id="hero">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-center text-white overflow-hidden pt-20 pb-16" id="hero">
+      {/* Background Image with Ambient Nature Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           alt="Premium Plots in Karjat"
-          className="w-full h-full object-cover scale-105 animate-[pulse_10s_ease-in-out_infinite] duration-1000"
+          className="w-full h-full object-cover scale-105"
           src="/hero.jpg"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-primary/20 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/45 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60"></div>
+        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
       </div>
-      <div className="relative z-10 max-w-[1380px] w-full mx-auto px-margin-mobile lg:px-margin pb-space-xl pt-space-xl flex flex-col justify-end">
+
+      {/* Main Content Container (Centered layout matching Walk in the Clouds) */}
+      <div className="relative z-10 max-w-4xl w-full mx-auto px-margin-mobile lg:px-margin flex flex-col items-center justify-center space-y-space-md py-space-xl">
         
-        <div className="max-w-4xl space-y-space-sm">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed/20 text-secondary-fixed border border-secondary-fixed/30 backdrop-blur-md text-xs uppercase tracking-widest font-semibold mb-1">
-            Premium Plots in Karjat
-          </div>
+        {/* Top Centered Pill Badge */}
+        <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white/95 text-xs font-semibold uppercase tracking-widest shadow-md">
+          <span>Premium Plots in Karjat</span>
+        </div>
 
-          <h1 className="font-display-lg text-display-lg-mobile lg:text-display-lg text-surface-container-lowest tracking-tight font-display-lg leading-tight">
-            Own Your Piece of Karjat
+        {/* Main Title: Own Your Piece of Karjat */}
+        <div className="space-y-1 max-w-3xl">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-sans leading-none">
+            Own Your Piece of
           </h1>
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-normal italic font-serif text-surface-container-lowest leading-tight">
+            Karjat
+          </h2>
+        </div>
 
-          <p className="font-title-lg text-title-lg text-secondary-fixed font-semibold tracking-wide">
+        {/* Subtitle & Specs */}
+        <div className="space-y-2 max-w-2xl">
+          <p className="font-title-lg text-title-lg text-secondary-fixed font-bold tracking-wide">
             Plots from 2,000 sq. ft. to 1 Acre &nbsp;·&nbsp; Starting from ₹1 Cr+
           </p>
-
-          <p className="font-body-lg text-body-lg text-surface-container-highest/90 max-w-2xl font-light leading-relaxed">
+          <p className="font-body-lg text-body-lg text-white/90 font-light leading-relaxed">
             Explore premium plot opportunities in Karjat with options for a private villa, weekend home or long-term investment.
           </p>
         </div>
 
-        {/* Action Cluster */}
-        <div className="flex flex-wrap items-center gap-space-md pt-space-lg">
+        {/* Centered Pill Action Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-space-md">
           <a
-            className="inline-flex items-center gap-space-sm bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg px-space-lg py-space-md rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer font-semibold"
+            className="inline-flex items-center justify-center bg-white hover:bg-surface-bright text-[#3b5730] font-label-lg text-label-lg px-8 py-3.5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer font-bold"
             href="#plot-options"
           >
             Explore Plot Options
-            <span className="material-symbols-outlined text-title-lg">arrow_forward</span>
           </a>
           <button
             onClick={onOpenBookModal}
-            className="inline-flex items-center gap-space-sm bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-surface-container-lowest backdrop-blur-md font-label-lg text-label-lg px-space-lg py-space-md rounded-lg transition-all duration-300 border border-white/20 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/40 text-white backdrop-blur-md font-label-lg text-label-lg px-8 py-3.5 rounded-full transition-all duration-300 shadow-md cursor-pointer font-semibold"
             type="button"
           >
-            <span className="material-symbols-outlined text-title-lg">calendar_month</span>
+            <span className="material-symbols-outlined text-title-md">calendar_month</span>
             Book Site Visit
           </button>
         </div>
 
-        {/* Minimal Quick Stats Rail */}
-        <div className="mt-space-xl pt-space-md grid grid-cols-2 md:grid-cols-4 gap-space-md bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-space-md border border-white/10">
-          <div className="flex flex-col">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant/70">Plot Range</span>
-            <span className="font-title-lg font-bold text-[22px] lg:text-[26px] text-surface-bright font-sans">2,000 sq ft - 1 Acre</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant/70">Price Entry</span>
-            <span className="font-title-lg font-bold text-[22px] lg:text-[26px] text-secondary-fixed font-sans">Starting ₹1 Cr+</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant/70">Land Options</span>
-            <span className="font-title-lg font-bold text-[22px] lg:text-[26px] text-surface-bright font-sans">NA & Agriculture</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-surface-variant/70">Lifestyle</span>
-            <span className="font-title-lg font-bold text-[22px] lg:text-[26px] text-surface-bright font-sans">Private Pool Options</span>
-          </div>
-        </div>
+      </div>
+
+      {/* Bottom Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-center text-white/70 space-y-1.5 pointer-events-none">
+        <span className="font-label-sm text-[11px] uppercase tracking-widest block font-medium">Scroll to Explore</span>
+        <div className="w-px h-6 bg-white/50 mx-auto animate-pulse"></div>
       </div>
     </section>
   );
