@@ -8,6 +8,7 @@ import LocationAdvantage from './components/LocationAdvantage';
 import KeyHighlights from './components/KeyHighlights';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import MobileFixedCTA from './components/MobileFixedCTA';
 import { BrochureModal, DossierModal, ImageLightboxModal, ToastNotification } from './components/Modals';
 
 export default function App() {
@@ -33,7 +34,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <div className="min-h-screen bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed pb-20 md:pb-0">
       <Header onOpenBookModal={handleOpenBookModal} />
 
       <main className="w-full bg-surface">
@@ -63,6 +64,9 @@ export default function App() {
 
       <Footer />
 
+      {/* Mobile Only Fixed Bottom Action Bar */}
+      <MobileFixedCTA onOpenBookModal={handleOpenBookModal} />
+
       {/* Interactive Overlay Dialogs */}
       <BrochureModal
         isOpen={isBrochureOpen}
@@ -83,3 +87,4 @@ export default function App() {
     </div>
   );
 }
+
