@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import EstateGallery from './components/EstateGallery';
-import BespokePlans from './components/BespokePlans';
-import Amenities from './components/Amenities';
-import WhyKarajat from './components/WhyKarajat';
-import NearbyPlaces from './components/NearbyPlaces';
-import PaymentOptions from './components/PaymentOptions';
-import LocationConnectivity from './components/LocationConnectivity';
-import BookTour from './components/BookTour';
+import WhyInvest from './components/WhyInvest';
+import PlotOptions from './components/PlotOptions';
+import KarajatLifestyle from './components/KarajatLifestyle';
+import LocationAdvantage from './components/LocationAdvantage';
+import KeyHighlights from './components/KeyHighlights';
+import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import { BrochureModal, DossierModal, ImageLightboxModal, ToastNotification } from './components/Modals';
 
@@ -40,15 +38,26 @@ export default function App() {
 
       <main className="w-full pt-20 bg-surface">
         <div className="flex flex-col w-full">
+          {/* Section 1 — Hero Banner */}
           <Hero onOpenBookModal={handleOpenBookModal} />
-          <EstateGallery onSelectImage={(item) => setSelectedGalleryItem(item)} />
-          <BespokePlans onOpenDossierModal={(plan) => setSelectedDossierPlan(plan)} />
-          <Amenities />
-          <WhyKarajat />
-          <NearbyPlaces />
-          <PaymentOptions onOpenBookModal={handleOpenBookModal} />
-          <LocationConnectivity />
-          <BookTour onShowToast={showToast} />
+
+          {/* Section 2 — Why Invest in Karjat? */}
+          <WhyInvest onOpenBookModal={handleOpenBookModal} />
+
+          {/* Section 3 — Plot Options */}
+          <PlotOptions onOpenBookModal={handleOpenBookModal} />
+
+          {/* Section 4 — The Karjat Lifestyle */}
+          <KarajatLifestyle onOpenBookModal={handleOpenBookModal} />
+
+          {/* Section 5 — Location Advantage */}
+          <LocationAdvantage onOpenBookModal={handleOpenBookModal} />
+
+          {/* Section 6 — Key Highlights */}
+          <KeyHighlights onOpenBookModal={handleOpenBookModal} />
+
+          {/* Section 7 — Final CTA */}
+          <FinalCTA onShowToast={showToast} />
         </div>
       </main>
 

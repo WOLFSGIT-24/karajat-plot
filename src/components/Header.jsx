@@ -4,23 +4,23 @@ export default function Header({ onOpenBookModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Masterplan', href: '#plot-masterplan' },
-    { label: 'Amenities', href: '#amenities' },
-    { label: 'Nearby Places', href: '#nearby-places' },
-    { label: 'Payment Options', href: '#payment-options' },
-    { label: 'Location', href: '#location-and-connectivity' },
+    { label: 'Overview', href: '#hero' },
+    { label: 'Why Karjat', href: '#why-invest' },
+    { label: 'Plot Options', href: '#plot-options' },
+    { label: 'Lifestyle', href: '#lifestyle' },
+    { label: 'Location', href: '#location' },
+    { label: 'Highlights & Pricing', href: '#key-highlights' },
   ];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all">
       <div className="h-20 max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
         <div className="flex items-center gap-space-xl">
-          <a className="flex items-center gap-space-xs sm:gap-space-sm" href="#overview">
+          <a className="flex items-center gap-space-xs sm:gap-space-sm" href="#hero">
             <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">GENERAL</span>
-            <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/80 pl-space-xs border-l border-on-surface-variant/20 ml-1">Karajat</span>
+            <span className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/80 pl-space-xs border-l border-on-surface-variant/20 ml-1">Karjat</span>
           </a>
-          <nav className="hidden md:flex items-center gap-space-md lg:gap-space-lg">
+          <nav className="hidden md:flex items-center gap-space-sm lg:gap-space-md">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -34,7 +34,6 @@ export default function Header({ onOpenBookModal }) {
         </div>
 
         <div className="flex items-center gap-space-md">
-          {/* Single Primary CTA Button */}
           <button
             onClick={onOpenBookModal}
             className="bg-tertiary-container hover:bg-tertiary text-on-tertiary transition-colors font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg shadow-sm font-semibold cursor-pointer whitespace-nowrap"
@@ -43,7 +42,6 @@ export default function Header({ onOpenBookModal }) {
             Book Site Visit
           </button>
 
-          {/* Mobile hamburger button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 text-primary focus:outline-none"
