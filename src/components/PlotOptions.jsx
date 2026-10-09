@@ -20,14 +20,14 @@ export default function PlotOptions({ onOpenBookModal }) {
       size: '10,000+ sq. ft.',
       desc: 'Designed for a larger private retreat',
       price: 'Starting ₹2.8 Cr+',
-      image: 'https://lh3.googleusercontent.com/aida/AEtjO1XDr7njAm5liTFIaSJNFUH9x49KlN0ZlbzkwFpZcFYuvvTBpYFZmdtL5nF078NokSqHt529gVbIMWjD7CPCfNMNd9EDeWoEPYSi2HHu2WSnomrmeAc8wVSySK0A05PkBFubKqJCQExIn0nL4zBoOSm_DfcQx4djTSGANYv7P90QzH4AyQt5aY7nYQ2H-H8RCyX2ky9TjSsS2Wm00i2dakGt36zEdgEEPjlg9ehDpwDG0rG5m8VxdgJ4_t8',
+      image: '/grand_manor.jpg',
       tag: 'Grand Manor',
     },
     {
       size: 'Up to 1 Acre',
       desc: 'For those looking for expansive private spaces',
       price: 'Custom Pricing',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDsygrpDg0lQxAx4gBxSEInzZNlAPmZNzz9s12Hkl2jeWSTA3P8STRBr-nyFtU-iTjwDbKpne-tcpHZXA3Nsu4WfHSK0JhimpRumQSeo5gt5cWjKJy1HwNawX0JG1LQyVPaEf3wZIOEtxNcOLK5gnrfGH8PeRt-EQpTIaQECZGMEanGck_0eIIHbfDBznLR2V7rmcoXzyF_ucPWfSECdeI1zRP4xp_rTVCMV2a1Z_z0-XNGnbKoezG9',
+      image: '/agro_estate.jpg',
       tag: 'Agro Estate',
     },
   ];

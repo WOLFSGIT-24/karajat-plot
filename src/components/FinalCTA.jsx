@@ -84,7 +84,7 @@ export default function FinalCTA({ onShowToast }) {
         <img
           alt="Find the Right Plot in Karjat"
           className="w-full h-full object-cover scale-105"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsygrpDg0lQxAx4gBxSEInzZNlAPmZNzz9s12Hkl2jeWSTA3P8STRBr-nyFtU-iTjwDbKpne-tcpHZXA3Nsu4WfHSK0JhimpRumQSeo5gt5cWjKJy1HwNawX0JG1LQyVPaEf3wZIOEtxNcOLK5gnrfGH8PeRt-EQpTIaQECZGMEanGck_0eIIHbfDBznLR2V7rmcoXzyF_ucPWfSECdeI1zRP4xp_rTVCMV2a1Z_z0-XNGnbKoezG9"
+          src="/agro_estate.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/30"></div>
       </div>
