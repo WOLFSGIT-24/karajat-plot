@@ -44,12 +44,13 @@ export default function Hero({ onOpenBookModal }) {
 
         {/* Centered Pill Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-space-md">
-          <a
+          <button
+            onClick={onOpenBookModal}
             className="inline-flex items-center justify-center bg-white hover:bg-surface-bright text-[#3b5730] font-label-lg text-label-lg px-8 py-3.5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer font-bold"
-            href="#plot-options"
+            type="button"
           >
             Explore Plot Options
-          </a>
+          </button>
           <button
             onClick={onOpenBookModal}
             className="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/40 text-white backdrop-blur-md font-label-lg text-label-lg px-8 py-3.5 rounded-full transition-all duration-300 shadow-md cursor-pointer font-semibold"

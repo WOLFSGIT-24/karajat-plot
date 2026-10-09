@@ -9,10 +9,11 @@ import KeyHighlights from './components/KeyHighlights';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 import MobileFixedCTA from './components/MobileFixedCTA';
-import { BrochureModal, DossierModal, ImageLightboxModal, ToastNotification } from './components/Modals';
+import { BrochureModal, DossierModal, EnquiryModal, ImageLightboxModal, ToastNotification } from './components/Modals';
 
 export default function App() {
   const [isBrochureOpen, setIsBrochureOpen] = useState(false);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
   const [selectedDossierPlan, setSelectedDossierPlan] = useState(null);
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
   const [toast, setToast] = useState(null);
@@ -25,12 +26,7 @@ export default function App() {
   };
 
   const handleOpenBookModal = () => {
-    const el = document.getElementById('book-tour');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      showToast('Scroll down to book your private site tour.', 'success');
-    }
+    setIsEnquiryModalOpen(true);
   };
 
   return (
@@ -68,6 +64,11 @@ export default function App() {
       <MobileFixedCTA onOpenBookModal={handleOpenBookModal} />
 
       {/* Interactive Overlay Dialogs */}
+      <EnquiryModal
+        isOpen={isEnquiryModalOpen}
+        onClose={() => setIsEnquiryModalOpen(false)}
+        onShowToast={showToast}
+      />
       <BrochureModal
         isOpen={isBrochureOpen}
         onClose={() => setIsBrochureOpen(false)}
@@ -87,4 +88,5 @@ export default function App() {
     </div>
   );
 }
+
 

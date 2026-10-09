@@ -9,21 +9,19 @@ export default function FinalCTA({ onShowToast }) {
 
   const [errors, setErrors] = useState({});
 
-  // Real-time name handler: block any numbers from being typed
+  // Real-time name handler: allow ONLY letters and spaces
   const handleNameChange = (e) => {
-    const val = e.target.value;
-    const filtered = val.replace(/[0-9]/g, '');
-    setFormData((prev) => ({ ...prev, name: filtered }));
+    const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+    setFormData((prev) => ({ ...prev, name: val }));
     if (errors.name) {
       setErrors((prev) => ({ ...prev, name: '' }));
     }
   };
 
-  // Real-time phone handler: block any alphabets/letters from being typed
+  // Real-time phone handler: allow ONLY digits 0-9 up to 10 digits max
   const handlePhoneChange = (e) => {
-    const val = e.target.value;
-    const filtered = val.replace(/[^0-9+\s-]/g, '');
-    setFormData((prev) => ({ ...prev, phone: filtered }));
+    const val = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+    setFormData((prev) => ({ ...prev, phone: val }));
     if (errors.phone) {
       setErrors((prev) => ({ ...prev, phone: '' }));
     }
@@ -57,7 +55,7 @@ export default function FinalCTA({ onShowToast }) {
     const digitsOnly = formData.phone.replace(/\D/g, '');
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required.';
-    } else if (digitsOnly.length < 10) {
+    } else if (digitsOnly.length !== 10) {
       newErrors.phone = 'Please enter a valid 10-digit phone number.';
     }
 
@@ -72,7 +70,7 @@ export default function FinalCTA({ onShowToast }) {
       return;
     }
 
-    onShowToast(`Thank you ${formData.name.trim()}! Your site visit reservation request for Karajat plots has been booked. Confirmation sent to ${formData.email}.`, 'success');
+    onShowToast(`Thank you ${formData.name.trim()}! Your site visit reservation request for Karjat plots has been booked. Confirmation sent to ${formData.email}.`, 'success');
     setFormData({ name: '', email: '', phone: '' });
     setErrors({});
   };
@@ -149,7 +147,7 @@ export default function FinalCTA({ onShowToast }) {
                     className={`w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 border transition-all ${
                       errors.name ? 'border-error ring-1 ring-error bg-error-container/20' : 'border-surface-container-high focus:ring-primary'
                     }`}
-                    placeholder="e.g. Vikramaditya Shah"
+                    placeholder="Enter your full name"
                     type="text"
                     required
                   />
@@ -172,7 +170,7 @@ export default function FinalCTA({ onShowToast }) {
                     className={`w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 border transition-all ${
                       errors.email ? 'border-error ring-1 ring-error bg-error-container/20' : 'border-surface-container-high focus:ring-primary'
                     }`}
-                    placeholder="vikram@example.com"
+                    placeholder="Enter your email address"
                     type="email"
                     required
                   />
@@ -192,10 +190,11 @@ export default function FinalCTA({ onShowToast }) {
                   <input
                     value={formData.phone}
                     onChange={handlePhoneChange}
+                    maxLength={10}
                     className={`w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-2 border transition-all ${
                       errors.phone ? 'border-error ring-1 ring-error bg-error-container/20' : 'border-surface-container-high focus:ring-primary'
                     }`}
-                    placeholder="+91 98200 00000"
+                    placeholder="Enter 10-digit phone number"
                     type="tel"
                     required
                   />

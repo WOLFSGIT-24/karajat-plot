@@ -38,13 +38,14 @@ export default function KarajatLifestyle({ onOpenBookModal }) {
               From waterfalls and dams to trekking trails, restaurants and unique attractions, Karjat offers something for every kind of getaway.
             </p>
             <div className="pt-space-sm">
-              <a
-                className="inline-flex items-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg font-bold shadow-md transition-colors"
-                href="#location"
+              <button
+                onClick={onOpenBookModal}
+                className="inline-flex items-center gap-space-xs bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed font-label-lg text-label-lg px-space-lg py-space-sm rounded-lg font-bold shadow-md transition-colors cursor-pointer"
+                type="button"
               >
                 Explore the Karjat Lifestyle
                 <span className="material-symbols-outlined text-title-md">arrow_forward</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
