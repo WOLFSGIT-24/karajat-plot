@@ -10,7 +10,7 @@ export default function Footer() {
               <img
                 src="/logo.svg"
                 alt="Prinalto Estates Logo"
-                className="h-10 sm:h-11 w-auto object-contain filter brightness-0 invert"
+                className="h-10 sm:h-11 w-auto object-contain"
               />
             </a>
             <p className="font-body-sm text-body-sm text-surface-variant/80 max-w-md">

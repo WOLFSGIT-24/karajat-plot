@@ -36,7 +36,7 @@ export default function Header({ onOpenBookModal }) {
           <img
             src="/logo.svg"
             alt="Prinalto Estates Logo"
-            className="h-9 sm:h-10 w-auto object-contain filter brightness-0 invert transition-opacity group-hover:opacity-90"
+            className="h-9 sm:h-10 w-auto object-contain transition-opacity group-hover:opacity-90"
           />
         </a>
 
