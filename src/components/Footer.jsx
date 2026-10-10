@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#1e2f1b] text-on-primary border-t border-white/10">
       <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-space-xl lg:gap-20 pb-space-xl border-b border-white/10">
           
           {/* Column 1: Brand & Overview */}
           <div className="flex flex-col gap-space-md">
@@ -66,40 +66,6 @@ export default function Footer() {
               Village Posari, Karjat, Raigad,<br />
               Maharashtra - 410201
             </p>
-            <a
-              className="font-label-sm text-xs text-secondary-fixed hover:text-white transition-colors flex items-center gap-1 pt-1 font-medium"
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="material-symbols-outlined text-sm">navigation</span>
-              Open Directions &amp; Maps
-            </a>
-          </div>
-
-          {/* Column 4: Plot Pricing & Details */}
-          <div className="flex flex-col gap-space-sm">
-            <span className="font-title-md text-title-md text-white font-semibold mb-1">
-              Plot Details
-            </span>
-            <div className="space-y-2 text-surface-variant/80 text-body-sm">
-              <p className="flex justify-between border-b border-white/10 pb-1.5">
-                <span>Plot Sizes:</span>
-                <span className="text-white font-medium">2,000 sq. ft. – 1 Acre</span>
-              </p>
-              <p className="flex justify-between border-b border-white/10 pb-1.5">
-                <span>Price Guide:</span>
-                <span className="text-white font-medium">Starting ₹1 Cr+</span>
-              </p>
-              <p className="flex justify-between border-b border-white/10 pb-1.5">
-                <span>Land Type:</span>
-                <span className="text-white font-medium">NA &amp; Agri Options</span>
-              </p>
-              <p className="flex justify-between">
-                <span>Community:</span>
-                <span className="text-white font-medium">Gated Estate</span>
-              </p>
-            </div>
           </div>
 
         </div>
@@ -125,4 +91,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
