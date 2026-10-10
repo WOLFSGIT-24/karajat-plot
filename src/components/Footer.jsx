@@ -6,14 +6,13 @@ export default function Footer() {
       <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter pb-space-xl border-b border-primary-container">
           <div className="lg:col-span-2 flex flex-col gap-space-md pr-space-md">
-            <div className="flex items-center gap-space-sm">
-              <span className="font-headline-md text-headline-md text-surface-container-lowest tracking-tight font-bold">
-                GENERAL
-              </span>
-              <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim pl-space-xs border-l border-primary-container ml-1">
-                Karajat Villa Plots
-              </span>
-            </div>
+            <a className="flex items-center gap-space-sm mb-1" href="#hero">
+              <img
+                src="/logo.svg"
+                alt="Prinalto Estates Logo"
+                className="h-10 sm:h-11 w-auto object-contain filter brightness-0 invert"
+              />
+            </a>
             <p className="font-body-sm text-body-sm text-surface-variant/80 max-w-md">
               Premium plot opportunities in Karjat from 2,000 sq. ft. to 1 Acre starting from ₹1 Cr+. Ideal for private weekend homes, villa living, or long-term land equity.
             </p>

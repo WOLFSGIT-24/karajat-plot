@@ -31,15 +31,13 @@ export default function Header({ onOpenBookModal }) {
     >
       <div className="max-w-[1380px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
         
-        {/* Left: Circular Organic Line-Art Emblem Logo */}
+        {/* Left: Brand Logo */}
         <a className="flex items-center gap-3 group" href="#hero">
-          <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white/90 group-hover:border-white group-hover:text-white transition-colors bg-white/10 backdrop-blur-sm">
-            <span className="material-symbols-outlined text-xl">filter_vintage</span>
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="font-headline-sm text-lg text-white tracking-tight font-bold leading-none">GENERAL</span>
-            <span className="font-label-sm text-[10px] uppercase tracking-widest text-white/80">Karjat</span>
-          </div>
+          <img
+            src="/logo.svg"
+            alt="Prinalto Estates Logo"
+            className="h-9 sm:h-10 w-auto object-contain filter brightness-0 invert transition-opacity group-hover:opacity-90"
+          />
         </a>
 
         {/* Center / Right: Nav Links + Enquire Button */}
